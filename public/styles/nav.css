@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-size: 80%;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+}
+
+#logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 120%;
+} 
+
+.navRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrows {
+  font-size: 90%;
+  display: flex;
+  flex-direction: column-reverse;
+  color: red;
+}
