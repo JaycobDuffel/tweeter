@@ -21,6 +21,11 @@
   <!-- Nav CSS -->
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
+  <!-- Header CSS -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+  <!-- New-Tweet Form CSS -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,7 +44,7 @@
   </nav>
 
   <!-- Header -->
-  <header>
+  <header id="header">
     <div>
         <img src="/images/profile-hex.png"> 
     </div>
@@ -49,7 +54,18 @@
     </div>
 </header>
   <!-- Page-specific (main) content here -->
-  <main class="container"></main>
+  <main class="container">
+    <section class="new-tweet">
+      <form method="POST" action="/tweets/">
+        <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div id="postForm">
+          <button id="submitTweetBtn" type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+  </main>
 </body>
 
 </html>
