@@ -56,7 +56,7 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form method="POST" action="/tweets/">
+      <form method="POST" action="/tweets/" id="txtArea">
         <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div id="postForm">
@@ -66,6 +66,7 @@
       </form>
     </section>
   </main>
+  <script src="./scripts/composer-char-counter.js"></script>
 </body>
 
 </html>
