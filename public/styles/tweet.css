@@ -1,5 +1,5 @@
 #tweet-container article {
-  height: 200px;
+  height: 215px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,12 +44,13 @@
   
   
   .tweetArticle:hover .handle {
-    color: powderblue;
+    font-weight: bold;
+    color: #4056A1;
     opacity: 1;    
   }
 
   .tweetArticle:hover {
-    box-shadow: powderblue 3px 4px 0 0;
+    box-shadow: #5e76c1 3px 4px 0 0;
   }
 
   
