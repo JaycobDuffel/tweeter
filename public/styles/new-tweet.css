@@ -34,7 +34,14 @@ textarea {
 }
 
 .new-tweet {
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
+  flex-direction: column;
+}
+
+label {
+  padding-bottom: 5px;
 }
 
 .counter {

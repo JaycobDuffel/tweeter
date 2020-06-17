@@ -15,7 +15,7 @@ $(() => {
         </div>
         <span class="handle username">${tweetData.user.handle}</span>
       </header>
-      <span id="tweetSpan">${tweetData.content.text}</span>
+      <span id="tweetSpan">${escape(tweetData.content.text)}</span>
       <footer>
         <span>${new Date(tweetData.created_at).toDateString()}</span>
         <div class="tweetButtons">
@@ -28,6 +28,15 @@ $(() => {
 
     return $tweet;
   }
+
+  //break function
+  const escape = function (str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+
   // gets data from server and renders tweets
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
@@ -53,11 +62,25 @@ $(() => {
     const $button = $('#submitTweetBtn')
     $button.on("click", (event) => {
       event.preventDefault(event);
+
+      // display error message if character count is exceeded
       if ($("#tweet-text").val().length > 140) {
-        return alert("Your tweet exceeds the maximum character limit");
+        $("#exceededCharLimit").removeClass("error").addClass("errorRed")
+        // remove error message after delay
+
+        setTimeout(() => {
+          $("#exceededCharLimit").removeClass("errorRed").addClass("error")
+        }, 3000);
+
+      // display error message if input is empty
       } else if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
-        return alert("You can not submit a blank tweet");
+        $("#emptyText").removeClass("error").addClass("errorRed")
+        // remove error message after delay
+        setTimeout(() => {
+          $("#emptyText").removeClass("errorRed").addClass("error")
+        }, 3000);
       } else {
+        // if no error, post the tweet
         const data = $("#txtArea").serialize();
         $.post("/tweets", data)
           .then(function () {

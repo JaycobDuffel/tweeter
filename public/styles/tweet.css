@@ -37,6 +37,7 @@
   #avatar span {
     padding-left: 10px;
   }
+  
 
   .username {
     opacity: 0;
@@ -51,6 +52,19 @@
 
   .tweetArticle:hover {
     box-shadow: #5e76c1 3px 4px 0 0;
+  }
+  
+  .errorRed {
+    margin: 0 auto;
+    padding: 0 5px 0 5px;
+    height: 75px;
+    border: 2px solid darkred;
+    color: red;
+    font-weight: bold;
+  }
+
+  .error {
+    display: none;
   }
 
   

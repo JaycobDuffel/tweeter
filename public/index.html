@@ -41,6 +41,7 @@
     <span id="logo">tweeter</span>
     <div class="navRight">
       <span><strong>Write</strong> a new tweet</span>
+      <img src="./images/favicon.ico">
     </div>
   </nav>
 
@@ -57,6 +58,8 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+        <span class="error" id="exceededCharLimit"><p>Character limit exceeded!</p></span>
+        <span class="error" id="emptyText"><p>You can not submit a blank tweet!</p></span>
       <form method="POST" action="/tweets/" id="txtArea">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
