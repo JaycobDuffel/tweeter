@@ -27,6 +27,9 @@
   <!-- New-Tweet Form CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+  <!-- Tweet Styling CSS -->
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -36,7 +39,7 @@
 
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav>
+  <nav id="navbar">
     <span id="logo">tweeter</span>
     <div class="navRight">
       <span><strong>Write</strong> a new tweet</span>
@@ -46,24 +49,90 @@
   <!-- Header -->
   <header id="header">
     <div>
-        <img src="/images/profile-hex.png"> 
+      <img src="/images/profile-hex.png">
     </div>
     <br>
     <div>
-        <h2>Your Name</h2>
+      <h2>Your Name</h2>
     </div>
-</header>
+  </header>
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
       <form method="POST" action="/tweets/" id="txtArea">
         <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div id="postForm">
+        <textarea name="text" id="tweet-text"></textarea>
+        <div id="postForm">
           <button id="submitTweetBtn" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+    </section>
+    <section id="tweet-container">
+      <article id="tweetsArticle">
+        <header>
+          <span>Name</span>
+          <span class="username" id="handle">@handle</span>
+        </header>
+        <span id="tweetSpan">If I have seen further it is by standing on the shoulders of giants, and their beanstalks. If I have seen
+          further it is by standing on the !</span>
+        <footer>
+          <span>10 days ago</span>
+          <div class="tweetButtons">
+            <a href="#"><img src="/images/002-flag.png" alt="flag-tweet"></a>
+            <a href="#"><img src="/images/001-retweet.png" alt="retweet"></a>
+            <a href="#"><img src="/images/003-love.png" alt="heart-tweet"></a>
+          </div>
+        </footer>
+      </article>
+      <article id="tweetsArticle">
+        <header>
+          <span>Name</span>
+          <span class="username" id="handle">@handle</span>
+        </header>
+        <span id="tweetSpan">If I have seen further it is by standing on the shoulders of giants, and their beanstalks. If I have seen
+          further it is by standing on the !</span>
+        <footer>
+          <span>10 days ago</span>
+          <div class="tweetButtons">
+            <a href="#"><img src="/images/002-flag.png" alt="flag-tweet"></a>
+            <a href="#"><img src="/images/001-retweet.png" alt="retweet"></a>
+            <a href="#"><img src="/images/003-love.png" alt="heart-tweet"></a>
+          </div>
+        </footer>
+      </article>
+      <article id="tweetsArticle">
+        <header>
+          <span>Name</span>
+          <span class="username" id="handle">@handle</span>
+        </header>
+        <span id="tweetSpan">If I have seen further it is by standing on the shoulders of giants, and their beanstalks. If I have seen
+          further it is by standing on the !</span>
+        <footer>
+          <span>10 days ago</span>
+          <div class="tweetButtons">
+            <a href="#"><img src="/images/002-flag.png" alt="flag-tweet"></a>
+            <a href="#"><img src="/images/001-retweet.png" alt="retweet"></a>
+            <a href="#"><img src="/images/003-love.png" alt="heart-tweet"></a>
+          </div>
+        </footer>
+      </article>
+      <article id="tweetsArticle">
+        <header>
+          <span>Name</span>
+          <span class="username" id="handle">@handle</span>
+        </header>
+        <span id="tweetSpan">If I have seen further it is by standing on the shoulders of giants, and their beanstalks. If I have seen
+          further it is by standing on the !</span>
+        <footer>
+          <span>10 days ago</span>
+          <div class="tweetButtons">
+            <a href="#"><img src="/images/002-flag.png" alt="flag-tweet"></a>
+            <a href="#"><img src="/images/001-retweet.png" alt="retweet"></a>
+            <a href="#"><img src="/images/003-love.png" alt="heart-tweet"></a>
+          </div>
+        </footer>
+      </article>
     </section>
   </main>
   <script src="./scripts/composer-char-counter.js"></script>

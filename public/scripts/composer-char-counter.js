@@ -1,14 +1,11 @@
-$(document).ready(function() {
-  // --- our code goes here ---
-  console.log('DOM is ready')
-});
-
-$("#tweet-text").keyup(function() {
-  let count = this.value.length;
-  $(".counter").text(140 - count)
-  if (this.value.length > 140) {
-    $(".counter").addClass("red");
-  } else {
-    $(".counter").removeClass("red");
-  }
+$(() => {
+  $("#tweet-text").keyup(function() {
+    let count = this.value.length;
+    $(".counter").text(140 - count)
+    if (this.value.length > 140) {
+      $(".counter").addClass("red");
+    } else {
+      $(".counter").removeClass("red");
+    }
+  })
 })

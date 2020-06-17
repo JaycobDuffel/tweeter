@@ -1,0 +1,47 @@
+#tweet-container article {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  border: 3px solid #535149;
+}
+
+#tweet-container header {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0 10px;
+
+}
+
+#tweetSpan {
+  justify-self: center;
+  line-height: 90%;
+  padding: 40px 10px 15px 10px;
+}
+
+#tweet-container footer {
+  padding: 15px 10px 0px 10px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #535149;
+
+  }
+
+  .username {
+    opacity: 0;
+  }
+
+
+  .shadowed {
+  box-shadow: lightskyblue 3px 4px 0px 0;
+  }
+
+  .faded {
+    opacity: 1;
+    color: lightskyblue;
+  }
+
+  

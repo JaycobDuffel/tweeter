@@ -13,7 +13,7 @@ textarea {
   background-color: #F4F1EC;
   border: none;
   width: 100%;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #535149;
 }
 
 #submitTweetBtn {
