@@ -11,37 +11,48 @@
   width: 98%;
   display: flex;
   justify-content: space-between;
-  padding: 15px 15px 0 15px;
+  align-content: center;
+  padding: 10px 15px 0 15px;
 
 }
 
 #tweetSpan {
   justify-self: center;
   line-height: 90%;
-  padding: 25px 10px 15px 10px;
+  padding: 15px 10px 15px 10px;
 }
 
 #tweet-container footer {
-  padding: 15px 15px 0px 15px;
+  padding: 5px 15px 0px 15px;
   width: 98%;
   display: flex;
   justify-content: space-between;
   border-top: 3px solid #535149;
+  }
 
+  #avatar {
+    display: flex;
+    align-items: center;
+  }
+  #avatar span {
+    padding-left: 10px;
   }
 
   .username {
     opacity: 0;
   }
-
-
-  .shadowed {
-  box-shadow: lightskyblue 3px 4px 0px 0;
+  
+  
+  .tweetArticle:hover .handle {
+    color: powderblue;
+    opacity: 1;    
   }
 
-  .faded {
-    opacity: 1;
-    color: lightskyblue;
+  .tweetArticle:hover {
+    box-shadow: powderblue 3px 4px 0 0;
   }
+
+  
+
 
   
