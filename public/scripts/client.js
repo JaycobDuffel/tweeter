@@ -89,6 +89,7 @@ $(() => {
             // clearing input & setting input as focus
             $("#tweet-text").val("");
             $("#tweet-text").focus();
+            $(".counter").val(140);
           })
       }
     })
