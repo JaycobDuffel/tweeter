@@ -28,7 +28,7 @@ button {
 
 .sticky {
   position: fixed;
-  top: 100;
+  top: 0;
   width: 100%;
 }
 

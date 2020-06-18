@@ -52,22 +52,30 @@
   <section id="layoutContainer">
     <!-- Header -->
     <header id="header">
+      <div id="hiddenNav">
+        <span id="hiddenLogo">tweeter</span>
+        <div class="hiddenNavRight">
+          <button id="hiddenWriteTweet"><strong>Write</strong> a new tweet</button>
+          <img src="./images/favicon.ico">
+        </div>
+      </div>
+      
       <div>
         <img src="/images/profile-hex.png" id="avatarImg">
       </div>
       <br>
       <div>
-        <h2>Amy Mansell</h2>
+        <h2 id="name">Amy Mansell</h2>
       </div>
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet hidden">
         <span class="error" id="exceededCharLimit">
-          <p>Character limit exceeded!</p>
+          Character limit exceeded!
         </span>
         <span class="error" id="emptyText">
-          <p>You can not submit a blank tweet!</p>
+          You can not submit a blank tweet!
         </span>
         <form method="POST" action="/tweets/" id="txtArea">
           <label for="tweet-text">What are you humming about?</label>

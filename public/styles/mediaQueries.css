@@ -1,6 +1,6 @@
 
 #layoutContainer {
-  padding: 0 10vw;
+  padding: 0 5vw;
     margin-top: 5vh;
      display: flex;
      justify-content: space-between;
@@ -14,21 +14,45 @@
 
    @media screen and (max-width: 900px) {
     #layoutContainer {
+      display: block;
       flex-direction: column;
       margin: 0 auto;
       padding: 0;
     }
     #header {
       width: 100vw;
+      height: 500px;
       margin: 0 auto;
+      justify-content: start;
     }
     .container {
       padding: 0;
     }
     nav {
-      background-color: #4056A1;
-      margin-top:79px ;
+      display: none;
     }
+
+    #hiddenNav {
+      display: flex;
+      justify-content: space-between;
+      background-color: transparent;
+      color: #FFFFFF;
+      font-size: 80%;
+      padding: 1em 1.5em 1em 1.5em;
+      width: 100%;
+    }
+
+    #hiddenLogo {
+      font-family: 'Bungee', sans-serif;
+      font-size: 120%;
+    }
+
+    .hiddenNavRight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     #writeTweet {
       background-color: transparent;
       border-style: none;
@@ -37,7 +61,31 @@
     .sticky {
       background-color: transparent;
     }
+  }
 
+  @media screen and (max-width: 590px) {
+    .tweetArticle {
+      height: 275px;
+    }
+  }
 
+  @media screen and (max-width: 486px) {
 
+    #header {
+      justify-content: center;
+    }
+
+    .tweetArticle {
+      height: 325px;
+    }
+
+    .hiddenNavRight {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #hiddenNav {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
