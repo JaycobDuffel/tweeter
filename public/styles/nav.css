@@ -5,7 +5,7 @@ nav {
   color: #FFFFFF;
   font-size: 80%;
   padding: 1em 1.5em 1em 1.5em;
-  
+  width: 100%;
 }
 
 #logo {
@@ -20,7 +20,8 @@ nav {
 }
 
 button {
-  background-color: #4056A1;
+  color: #FFFFFF;
+  background-color: transparent;
   border-style: none;
   outline: none;
 }

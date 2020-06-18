@@ -1,0 +1,43 @@
+
+#layoutContainer {
+  padding: 0 10vw;
+    margin-top: 5vh;
+     display: flex;
+     justify-content: space-between;
+   }
+
+   @media screen and (max-width: 1342px) {
+     .tweetArticle {
+       height: 250px;
+     }
+   }
+
+   @media screen and (max-width: 900px) {
+    #layoutContainer {
+      flex-direction: column;
+      margin: 0 auto;
+      padding: 0;
+    }
+    #header {
+      width: 100vw;
+      margin: 0 auto;
+    }
+    .container {
+      padding: 0;
+    }
+    nav {
+      background-color: #4056A1;
+      margin-top:79px ;
+    }
+    #writeTweet {
+      background-color: transparent;
+      border-style: none;
+      outline: none;
+    }
+    .sticky {
+      background-color: transparent;
+    }
+
+
+
+  }

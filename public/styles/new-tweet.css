@@ -17,6 +17,10 @@ textarea {
   border-bottom: 3px solid #535149;
 }
 
+label {
+  padding-bottom: 5px;
+}
+
 #submitTweetBtn {
   font-size: 90%;
   padding: 3px;
@@ -40,8 +44,8 @@ textarea {
   flex-direction: column;
 }
 
-label {
-  padding-bottom: 5px;
+.hidden {
+  display: none;
 }
 
 .counter {

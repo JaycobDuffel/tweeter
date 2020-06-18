@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
@@ -20,15 +20,19 @@
 
   <!-- Nav CSS -->
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
-  <!-- Header CSS -->
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  
 
   <!-- New-Tweet Form CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
   <!-- Tweet Styling CSS -->
   <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
+  <!-- Header -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+  <!-- All media queries -->
+  <link rel="stylesheet" href="/styles/mediaQueries.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -37,7 +41,7 @@
 
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav id="navbar">
+  <nav>
     <span id="logo">tweeter</span>
     <div class="navRight">
       <button id="writeTweet"><strong>Write</strong> a new tweet</button>
@@ -45,33 +49,39 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <header id="header">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Your Name</h2>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-        <span class="error" id="exceededCharLimit"><p>Character limit exceeded!</p></span>
-        <span class="error" id="emptyText"><p>You can not submit a blank tweet!</p></span>
-      <form method="POST" action="/tweets/" id="txtArea">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div id="postForm">
-          <button id="submitTweetBtn" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <section id="tweet-container">
-    </section>
-  </main>
+  <section id="layoutContainer">
+    <!-- Header -->
+    <header id="header">
+      <div>
+        <img src="/images/profile-hex.png" id="avatarImg">
+      </div>
+      <br>
+      <div>
+        <h2>Amy Mansell</h2>
+      </div>
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet hidden">
+        <span class="error" id="exceededCharLimit">
+          <p>Character limit exceeded!</p>
+        </span>
+        <span class="error" id="emptyText">
+          <p>You can not submit a blank tweet!</p>
+        </span>
+        <form method="POST" action="/tweets/" id="txtArea">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div id="postForm">
+            <button id="submitTweetBtn" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section id="tweet-container">
+      </section>
+    </main>
+  </section>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script src="./scripts/composer-char-counter.js"></script>
