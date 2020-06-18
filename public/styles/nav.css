@@ -19,6 +19,12 @@ nav {
   align-items: center;
 }
 
+button {
+  background-color: #4056A1;
+  border-style: none;
+  outline: none;
+}
+
 .sticky {
   position: fixed;
   top: 100;

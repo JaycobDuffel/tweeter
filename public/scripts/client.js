@@ -72,7 +72,7 @@ $(() => {
           $("#exceededCharLimit").removeClass("errorRed").addClass("error")
         }, 3000);
 
-      // display error message if input is empty
+        // display error message if input is empty
       } else if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
         $("#emptyText").removeClass("error").addClass("errorRed")
         // remove error message after delay
