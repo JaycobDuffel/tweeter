@@ -8,7 +8,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["Full-size screenshot with tweet from hidden"](https://github.com/duffelshuffel/tweeter/blob/master/public/docs/maximizedTweetFormHidden.png?raw=true)
 
-!["smaller window screenshot with tweet from displayed"](https://github.com/duffelshuffel/tweeter/blob/master/public/docs/maximizedTweetFormHidden.png?raw=true)
+!["smaller window screenshot with tweet from displayed"](https://github.com/duffelshuffel/tweeter/blob/master/public/docs/withTweetForm.png?raw=true)
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
@@ -16,6 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
-
+- Body-Parser
 - Express
+- Chance
+- Moment
 - Node 5.10.x or above
