@@ -3,10 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(() => {
+  
   // template for displaying our tweets
   const createTweetElement = (tweetData) => {
-    const $tweet = $(`
+    const timeTweeted = new Date(tweetData.created_at);
+       const $tweet = $(`
     <article class="tweetArticle">
       <header>
         <div id="avatar">
@@ -17,7 +20,7 @@ $(() => {
       </header>
       <span id="tweetSpan">${escape(tweetData.content.text)}</span>
       <footer>
-        <span>${new Date(tweetData.created_at).toDateString()}</span>
+        <span>${moment(timeTweeted).startOf('minute').fromNow()}</span>
         <div class="tweetButtons hide">
           <a href="#"><img src="/images/002-flag.png" alt="flag-tweet"></a>
           <a href="#"><img src="/images/001-retweet.png" alt="retweet"></a>
@@ -29,14 +32,6 @@ $(() => {
     return $tweet;
   }
 
-  //break function
-  const escape = function (str) {
-    let div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  }
-
-
   // gets data from server and renders tweets
   const renderTweets = (tweets) => {
     for (const tweet of tweets) {
@@ -47,8 +42,8 @@ $(() => {
   //sticky nav bar
   $(document).ready(function () {
     $(document).scroll(function () {
-      var scroll = $(this).scrollTop();
-      var topDist = $("#header").position();
+      let scroll = $(this).scrollTop();
+      let topDist = $("#header").position();
       if (scroll > topDist.top) {
         $('nav').addClass('sticky');
       } else {

@@ -9,9 +9,9 @@ nav {
 }
 
 #logo {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   font-size: 120%;
-} 
+}
 
 .navRight {
   display: flex;
@@ -31,4 +31,3 @@ button {
   top: 0;
   width: 100%;
 }
-

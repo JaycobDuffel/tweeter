@@ -14,7 +14,6 @@
   justify-content: space-between;
   align-content: center;
   padding: 10px 15px 0 15px;
-
 }
 
 #tweetSpan {
@@ -29,49 +28,43 @@
   display: flex;
   justify-content: space-between;
   border-top: 3px solid #535149;
-  }
+}
 
-  #avatar {
-    display: flex;
-    align-items: center;
-  }
-  #avatar span {
-    padding-left: 10px;
-  }
-  
+#avatar {
+  display: flex;
+  align-items: center;
+}
 
-  .hide {
-    opacity: 0;
-  }
-  
-  
-  .tweetArticle:hover .handle {
-    font-weight: bold;
-    color: #4056A1;
-    opacity: 1;    
-  }
+#avatar span {
+  padding-left: 10px;
+}
 
-  .tweetArticle:hover .hide {
-    opacity: 1;
-  }
+.hide {
+  opacity: 0;
+}
 
-  .tweetArticle:hover {
-    box-shadow: #5e76c1 3px 4px 0 0;
-  }
-  
-  .errorRed {
-    display: flex;
-    padding: 10px;
-    border: solid 3px rgb(168, 0, 0);
-    color: rgb(168, 0, 0);
-    font-weight: bold;
-  }
+.tweetArticle:hover .handle {
+  font-weight: bold;
+  color: #5e76c1;
+  opacity: 1;
+}
 
-  .error {
-    display: none;
-  }
+.tweetArticle:hover .hide {
+  opacity: 1;
+}
 
-  
+.tweetArticle:hover {
+  box-shadow: #5e76c1 3px 4px 0 0;
+}
 
+.errorRed {
+  display: flex;
+  padding: 10px;
+  border: solid 3px #a80000;
+  color: #a80000;
+  font-weight: bold;
+}
 
-  
+.error {
+  display: none;
+}
